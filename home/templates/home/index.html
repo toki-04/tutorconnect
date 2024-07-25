@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorConnect</title>
+    {% load static %}
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'core/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'core/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'core/vendor/quill/quill.snow.css' %}" rel="stylesheet">
+    <link href="{% static 'core/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+    <link href="{% static 'core/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'core/vendor/simple-datatables/style.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{% static 'core/css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-image">
+        <div class="overlay"></div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="#"><h4>TutorConnect</h4></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="login-page.html">Log in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container d-flex h-100 align-items-center content">
+            <div class="row w-100">
+                <div class="col-md-6 find-tutor animated">
+                    <h1>FIND YOUR TUTOR</h1>
+                    <p>Embark on a learning journey like never before with TutorConnect. Our platform is your gateway to a world of knowledge, offering a diverse range of tutors ready to empower you.</p>
+                    <a href="learner-sign-up.html" class="btn btn-custom">BE A LEARNER</a>
+                </div>
+                <div class="col-md-6 text-end become-tutor animated">
+                    <h1>BECOME A TUTOR</h1>
+                    <p>Step into the role of a tutor and guide learners on TutorConnect, where your expertise transforms lives. Join our community to share your knowledge and inspire a community eager for learning.</p>
+                    <a href="tutor-registration.html" class="btn btn-custom">BECOME A TUTOR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row about-section">
+            <div class="col-md-6 about-us-section slide-in">
+                <h2>About Us</h2>
+                <p>TutorConnect is a collaborative effort by a group of college students dedicated to changing the way tutoring services are accessed in the Philippines. With a vision of enhancing educational support, we aim to provide a platform where learners and tutors can connect.</p>
+                <h4>Our Team</h4>
+                <p>Our team combines skills in web development, design, and user experience. Together, we bring a mix of technical expertise and understanding of the educational landscape in the Philippines. Our goal is to ensure that TutorConnect offers a practical solution for all your tutoring needs.</p>
+            </div>
+            <div class="col-md-6 about-me-section slide-in-right">
+                <h2>Our Story</h2>
+                <p>The idea of TutorConnect was inspired by our adviser, who gave us a hint that sparked our imagination. We took that initial idea and expanded it, driven by our collective desire to make quality education accessible to everyone. As students, we understand the challenges of finding reliable and effective tutoring, and we set out to create a solution that addresses these needs.</p>
+                <h4>What We Offer</h4>
+                <p>At TutorConnect, we provide a directory of tutors across various subjects and levels. Our platform is not only focused on academic subjects but is also open to areas like dancing, singing, and more. As long as the tutor and learner can meet, TutorConnect is here to facilitate the connection. With features and an intuitive interface, TutorConnect makes the process of finding a tutor nearby simple.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="modal-text">Please Choose your role</p>
+                    <a href="learner-sign-up.html" class="btn btn-primary-custom btn-lg mb-2">Sign Up as Learner</a>
+                    <br>
+                    <a href="tutor-registration.html" class="btn btn-success-custom btn-lg">Sign Up as Tutor</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'core/vendor/apexcharts/apexcharts.min.js' %}"></script>
+    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'core/vendor/chart.js/chart.umd.js' %}"></script>
+    <script src="{% static 'core/vendor/echarts/echarts.min.js' %}"></script>
+    <script src="{% static 'core/vendor/quill/quill.js' %}"></script>
+    <script src="{% static 'core/vendor/simple-datatables/simple-datatables.js' %}"></script>
+    <script src="{% static 'core/vendor/tinymce/tinymce.min.js' %}"></script>
+    <script src="{% static 'core/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'core/js/main.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
