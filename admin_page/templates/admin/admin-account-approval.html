@@ -1,0 +1,162 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Admin / Account Approval</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+{% endblock head %}
+
+{% block content %}
+{% include 'core/admin-header.html' %}
+{% include 'core/admin-sidebar.html' %}
+
+ <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Account Approval</h1>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Main Section -->
+    <section class="section dashboard">
+      <div class="row">
+        <!-- Learner Account Approval List -->
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Learner Account Approval List</h5>
+              <p>Review and manage new learner account requests. Use the button to review each request.</p>
+
+              <!-- Learner Account Approval Table -->
+              <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
+                <div class="datatable-top">
+                  <div class="datatable-dropdown">
+                    <label>
+                      <select class="datatable-selector" name="per-page">
+                        <option value="5">5</option>
+                        <option value="10" selected="">10</option>
+                        <option value="15">15</option>
+                        <option value="-1">All</option>
+                      </select>
+                      entries per page
+                    </label>
+                  </div>
+                  <div class="datatable-search">
+                    <input class="datatable-input" placeholder="Search..." type="search" name="search" title="Search within table" />
+                  </div>
+                </div>
+                <div class="datatable-container">
+                  <table class="table datatable datatable-table">
+                    <thead>
+                      <tr>
+                        <th data-sortable="true"><button class="datatable-sorter">#</button></th>
+                        <th data-sortable="true"><button class="datatable-sorter">Learner Name</button></th>
+                        <th data-sortable="true"><button class="datatable-sorter">Email</button></th>
+                        <th data-sortable="false"><button class="datatable-sorter">Actions</button></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-index="0">
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>
+                          <button class="btn btn-primary btn-sm">Review</button>
+                        </td>
+                      </tr>
+                      <tr data-index="1">
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td>
+                          <button class="btn btn-primary btn-sm">Review</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="datatable-bottom">
+                  <div class="datatable-info">Showing 1 to 2 of 2 entries</div>
+                  <nav class="datatable-pagination">
+                    <ul class="datatable-pagination-list"></ul>
+                  </nav>
+                </div>
+              </div>
+              <!-- End Learner Account Approval Table -->
+            </div>
+          </div>
+        </div>
+        <!-- End Learner Account Approval List -->
+
+        <!-- Tutor Account Approval List -->
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tutor Account Approval List</h5>
+              <p>Review and manage new tutor account requests. Use the button to review each request.</p>
+
+              <!-- Tutor Account Approval Table -->
+              <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
+                <div class="datatable-top">
+                  <div class="datatable-dropdown">
+                    <label>
+                      <select class="datatable-selector" name="per-page">
+                        <option value="5">5</option>
+                        <option value="10" selected="">10</option>
+                        <option value="15">15</option>
+                        <option value="-1">All</option>
+                      </select>
+                      entries per page
+                    </label>
+                  </div>
+                  <div class="datatable-search">
+                    <input class="datatable-input" placeholder="Search..." type="search" name="search" title="Search within table" />
+                  </div>
+                </div>
+                <div class="datatable-container">
+                  <table class="table datatable datatable-table">
+                    <thead>
+                      <tr>
+                        <th data-sortable="true"><button class="datatable-sorter">#</button></th>
+                        <th data-sortable="true"><button class="datatable-sorter">Tutor Name</button></th>
+                        <th data-sortable="true"><button class="datatable-sorter">Email</button></th>
+                        <th data-sortable="false"><button class="datatable-sorter">Actions</button></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-index="0">
+                        <td>1</td>
+                        <td>Brandon Jacob</td>
+                        <td>brandon@example.com</td>
+                        <td>
+                          <button class="btn btn-primary btn-sm">Review</button>
+                        </td>
+                      </tr>
+                      <tr data-index="1">
+                        <td>2</td>
+                        <td>Bridie Kessler</td>
+                        <td>bridie@example.com</td>
+                        <td>
+                          <button class="btn btn-primary btn-sm">Review</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="datatable-bottom">
+                  <div class="datatable-info">Showing 1 to 2 of 2 entries</div>
+                  <nav class="datatable-pagination">
+                    <ul class="datatable-pagination-list"></ul>
+                  </nav>
+                </div>
+              </div>
+              <!-- End Tutor Account Approval Table -->
+            </div>
+          </div>
+        </div>
+        <!-- End Tutor Account Approval List -->
+      </div>
+    </section>
+  </main>
+
+{% endblock content %}

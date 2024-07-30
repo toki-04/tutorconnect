@@ -1,0 +1,113 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Learner / Tutor Profile</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+{% endblock head %}
+
+{% block content %}
+<main id="homepage" class="homepage">
+      <div class="container py-5">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <!-- Card Image Column -->
+            <div class="col-md-4" style="padding-right: 20px;">
+          <img src="{% static 'core/img/slides-2.jpg' %}" class="img-fluid rounded-start mt-3 tutor-image" alt="Tutor's Image" />
+            </div>
+            <!-- Card Body Column -->
+            <div class="col-md-8" style="padding-right: 20px;">
+              <div class="card-body">
+                <!-- Tutor's Name -->
+                <h5 class="card-title">Tutor's Name</h5>
+                <!-- Ratings -->
+                <div class="ratings">
+                  <span>&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                  <!-- Example star ratings -->
+                </div>
+                <!-- Location -->
+                <p class="card-text">Location: City, Country</p>
+                <!-- Connect Button -->
+                <a href="#" class="btn btn-primary">Connect to Tutor</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Tutor Information</h5>
+
+            <!-- Bordered Tabs -->
+            <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#bordered-about" type="button" role="tab" aria-controls="about" aria-selected="true">About</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#bordered-reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false" tabindex="-1">Reviews</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="specialties-tab" data-bs-toggle="tab" data-bs-target="#bordered-specialties" type="button" role="tab" aria-controls="specialties" aria-selected="false" tabindex="-1">Specialties</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#bordered-experience" type="button" role="tab" aria-controls="experience" aria-selected="false" tabindex="-1">Experience</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#bordered-education" type="button" role="tab" aria-controls="education" aria-selected="false" tabindex="-1">Education</button>
+              </li>
+            </ul>
+            <div class="tab-content pt-2" id="borderedTabContent">
+              <!-- About Tab -->
+              <div class="tab-pane fade show active" id="bordered-about" role="tabpanel" aria-labelledby="about-tab">
+                <h5>About</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac libero et justo vestibulum mollis. Nulla facilisi. Aenean vitae nibh euismod, sollicitudin nunc sed, aliquet ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer dapibus justo eget dolor efficitur, at tempor nunc luctus.</p>
+              </div>
+              <!-- Reviews Tab -->
+              <div class="tab-pane fade" id="bordered-reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                <h5>Reviews</h5>
+                <div class="review">
+                  <h6>Jane Doe</h6>
+                  <span>&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                  <!-- 4-star rating -->
+                  <p>John was an excellent tutor who really helped me understand complex math concepts. Highly recommended!</p>
+                </div>
+              </div>
+              <!-- Specialties Tab -->
+              <div class="tab-pane fade" id="bordered-specialties" role="tabpanel" aria-labelledby="specialties-tab">
+                <h5>Specialties</h5>
+                <div class="specialty">
+                  <h6>Mathematics</h6>
+                  <p>Specialized in algebra, calculus, and geometry, helping students grasp fundamental and advanced math concepts.</p>
+                </div>
+              </div>
+              <!-- Experience Tab -->
+              <div class="tab-pane fade" id="bordered-experience" role="tabpanel" aria-labelledby="experience-tab">
+                <h5>Experience</h5>
+                <div class="experience">
+                  <h6>Senior Math Tutor</h6>
+                  <p><strong>Company Name:</strong> XYZ Tutoring Services</p>
+                  <p><strong>Start Date:</strong> January 2018</p>
+                  <p><strong>End Date:</strong> Present</p>
+                  <p><strong>Description:</strong> Providing high-quality math tutoring to high school and college students, developing personalized lesson plans, and assisting with homework and exam preparation.</p>
+                </div>
+              </div>
+              <!-- Education Tab -->
+              <div class="tab-pane fade" id="bordered-education" role="tabpanel" aria-labelledby="education-tab">
+                <h5>Education</h5>
+                <div class="education">
+                  <p><strong>Level of Education:</strong> Bachelor's Degree</p>
+                  <p><strong>Institution Name:</strong> ABC University</p>
+                  <p><strong>Field of Study:</strong> Mathematics</p>
+                  <p><strong>Start Date:</strong> September 2013</p>
+                  <p><strong>Graduation Date:</strong> May 2017</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Bordered Tabs -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+{% endblock content %}

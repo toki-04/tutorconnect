@@ -1,0 +1,192 @@
+{% include 'core/base.html' %}
+
+{% block head %}
+    <title>Admin / Dashboard</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+{% endblock head %}
+
+{% block content %}
+{% include 'core/admin-header.html' %}
+{% include 'core/admin-sidebar.html' %}
+
+
+
+    <!-- ======= Main Content ======= -->
+    <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>Dashboard</h1>
+      </div>
+      <!-- End Page Title -->
+
+      <section class="section dashboard">
+        <div class="row">
+          <!-- Total Learners Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card">
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+    
+              <div class="card-body">
+                <h5 class="card-title">Total Learners <span>| Today</span></h5>
+    
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-person"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>500</h6>
+                    <span class="text-success small pt-1 fw-bold">20%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Total Learners Card -->
+
+          <!-- Total Tutors Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card">
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+    
+              <div class="card-body">
+                <h5 class="card-title">Total Tutors <span>| Today</span></h5>
+    
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-person"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>150</h6>
+                    <span class="text-success small pt-1 fw-bold">15%</</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Total Tutors Card -->
+
+          <!-- Overall Users Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card">
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+    
+              <div class="card-body">
+                <h5 class="card-title">Overall Users <span>| Today</span></h5>
+    
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6>650</h6>
+                    <span class="text-success small pt-1 fw-bold">25%</</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Overall Users Card -->
+
+          <!-- Doughnut Chart -->
+          <div class="card">
+            <div class="filter">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filter</h6>
+                </li>
+                <li><a class="dropdown-item" href="#">Today</a></li>
+                <li><a class="dropdown-item" href="#">This Month</a></li>
+                <li><a class="dropdown-item" href="#">This Year</a></li>
+              </ul>
+            </div>
+    
+            <div class="card-body pb-0">
+              <h5 class="card-title">Doughnut Chart <span>| Today</span></h5>
+    
+              <div id="trafficChart" style="min-height: 400px" class="echart"></div>
+    
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  echarts.init(document.querySelector("#trafficChart")).setOption({
+                    tooltip: {
+                      trigger: "item",
+                    },
+                    legend: {
+                      top: "5%",
+                      left: "center",
+                    },
+                    series: [
+                      {
+                        name: "Users",
+                        type: "pie",
+                        radius: ["40%", "70%"],
+                        avoidLabelOverlap: false,
+                        label: {
+                          show: false,
+                          position: "center",
+                        },
+                        emphasis: {
+                          label: {
+                            show: true,
+                            fontSize: "18",
+                            fontWeight: "bold",
+                          },
+                        },
+                        labelLine: {
+                          show: false,
+                        },
+                        data: [
+                          { value: 500, name: "Total Learners" },
+                          { value: 150, name: "Total Tutors" },
+                          { value: 650, name: "Overall Users" },
+                        ],
+                      },
+                    ],
+                  });
+                });
+              </script>
+            </div>
+          </div>
+          <!-- End Doughnut Chart -->
+        </div>
+      </section>
+    </main>
+    <!-- End Main Content -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+{% endblock content %}
+
+

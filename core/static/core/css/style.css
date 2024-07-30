@@ -1274,7 +1274,7 @@ h6 {
 }
 
 .bg-image {
-  background-image: url('/assets/img/bg.png'); /* Update the path as needed */
+  background-image: url("http://127.0.0.1:8000/static/core/img/bg.png"); /* Update the path as needed */
   background-size: cover;
   background-position: center;
   height: 100vh;

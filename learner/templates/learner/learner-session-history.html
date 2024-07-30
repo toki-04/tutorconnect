@@ -1,0 +1,162 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block head %}
+  <title>Learner / Session and History</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+{% endblock head %}
+{% block content %}
+    <main id="homepage" class="homepage">
+      <div class="container py-5">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <!-- Card Image Column -->
+            <div class="col-md-4">
+          <img src="{% static 'core/img/slides-2.jpg' %}" class="img-fluid rounded-start mt-3 tutor-image" alt="Tutor's Image" />
+            </div>
+            <!-- Card Body Column -->
+            <div class="col-md-8">
+              <div class="card-body">
+                <!-- Learner's Name -->
+                <h5 class="card-title-custom">Learner's Name</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Tutor Information</h5>
+    
+            <!-- Bordered Tabs -->
+            <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="connected-tutors-tab" data-bs-toggle="tab" data-bs-target="#bordered-connected-tutors" type="button" role="tab" aria-controls="connected-tutors" aria-selected="true">Connected Tutors</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="rate-review-tab" data-bs-toggle="tab" data-bs-target="#bordered-rate-review" type="button" role="tab" aria-controls="rate-review" aria-selected="false" tabindex="-1">Rate and Review</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="report-tutor-tab" data-bs-toggle="tab" data-bs-target="#bordered-report-tutor" type="button" role="tab" aria-controls="report-tutor" aria-selected="false" tabindex="-1">Report a Tutor</button>
+              </li>
+            </ul>
+            <div class="tab-content pt-2" id="borderedTabContent">
+              <!-- connected-tutors Tab -->
+              <div class="tab-pane fade show active" id="bordered-connected-tutors" role="tabpanel" aria-labelledby="connected-tutors-tab">
+                <h5>Connected Tutors</h5>
+                <p>List of all connected tutors goes here...</p>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Subject</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Brandon Jacob</td>
+                      <td>Mathematics</td>
+                      <td>Active</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Bridie Kessler</td>
+                      <td>Physics</td>
+                      <td>Active</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Ashleigh Langosh</td>
+                      <td>Chemistry</td>
+                      <td>Active</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- rate-review Tab -->
+              <div class="tab-pane fade" id="bordered-rate-review" role="tabpanel" aria-labelledby="rate-review-tab">
+                <h5>Rate and Review</h5>
+                <p>Select a tutor to rate and review:</p>
+                <form>
+                  <div class="mb-3">
+                    <label for="tutor-select" class="form-label">Select Tutor:</label>
+                    <select class="form-select" id="tutor-select">
+                      <option selected disabled>Select Tutor</option>
+                      <option value="1">Brandon Jacob</option>
+                      <option value="2">Bridie Kessler</option>
+                      <option value="3">Ashleigh Langosh</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="rating" class="form-label">Rating:</label>
+                    <div class="rating" data-mdb-rating-init="" tabindex="0" data-mdb-rating-initialized="true">
+                      <li>
+                        <i class="fa-star fa-sm text-primary far" data-mdb-toggle="tooltip" aria-label="Bad" data-mdb-original-title="Bad" data-mdb-tooltip-initialized="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa-star fa-sm text-primary far" data-mdb-toggle="tooltip" aria-label="Poor" data-mdb-original-title="Poor" data-mdb-tooltip-initialized="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa-star fa-sm text-primary far" data-mdb-toggle="tooltip" aria-label="OK" data-mdb-original-title="OK" data-mdb-tooltip-initialized="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa-star fa-sm text-primary far" data-mdb-toggle="tooltip" aria-label="Good" data-mdb-original-title="Good" data-mdb-tooltip-initialized="true"></i>
+                      </li>
+                      <li>
+                        <i class="fa-star fa-sm text-primary far" data-mdb-toggle="tooltip" aria-label="Excellent" data-mdb-original-title="Excellent" data-mdb-tooltip-initialized="true"></i>
+                      </li>
+                      <input type="hidden" name="rating" id="rating">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="review" class="form-label">Review:</label>
+                    <textarea class="form-control" id="review" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+              <!-- report-tutor Tab -->
+              <div class="tab-pane fade" id="bordered-report-tutor" role="tabpanel" aria-labelledby="report-tutor-tab">
+                <h5>Report a Tutor</h5>
+                <p>Select a tutor to report:</p>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Subject</th>
+                      <th scope="col">Report</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Brandon Jacob</td>
+                      <td>Mathematics</td>
+                      <td><button class="btn btn-danger">Report</button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Bridie Kessler</td>
+                      <td>Physics</td>
+                      <td><button class="btn btn-danger">Report</button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Ashleigh Langosh</td>
+                      <td>Chemistry</td>
+                      <td><button class="btn btn-danger">Report</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- End Bordered Tabs -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+{% endblock content %}

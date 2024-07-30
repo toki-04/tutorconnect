@@ -1,0 +1,194 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Tutor / List of Learners</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+{% endblock head%}
+
+{% block content %}
+{% include 'core/header.html' %}
+{% include 'core/sidebar.html' %}
+    <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>List of Learners</h1>
+      </div>
+      <!-- End Page Title -->
+      <section class="section dashboard">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">New Connect Learner</h5>
+                <p>Review and manage new connect learner requests.</p>
+      
+                <!-- New Connect Learner Table -->
+                <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
+                  <div class="datatable-top">
+                    <div class="datatable-dropdown">
+                      <label>
+                        <select class="datatable-selector" name="per-page">
+                          <option value="5">5</option>
+                          <option value="10" selected="">10</option>
+                          <option value="15">15</option>
+                          <option value="-1">All</option>
+                        </select>
+                        entries per page
+                      </label>
+                    </div>
+                    <div class="datatable-search">
+                      <input class="datatable-input" placeholder="Search..." type="search" name="search" title="Search within table" />
+                    </div>
+                  </div>
+                  <div class="datatable-container">
+                    <table class="table datatable datatable-table">
+                      <thead>
+                        <tr>
+                          <th data-sortable="true"><button class="datatable-sorter">#</button></th>
+                          <th data-sortable="true"><button class="datatable-sorter">Learner Name</button></th>
+                          <th data-sortable="false"><button class="datatable-sorter">Actions</button></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-index="0">
+                          <td>1</td>
+                          <td>John Doe</td>
+                          <td>
+                            <button class="btn btn-success btn-sm">Confirm</button>
+                            <button class="btn btn-danger btn-sm">Decline</button>
+                            <button class="btn btn-primary btn-sm">Message</button>
+                          </td>
+                        </tr>
+                        <tr data-index="1">
+                          <td>2</td>
+                          <td>Jane Smith</td>
+                          <td>
+                            <button class="btn btn-success btn-sm">Confirm</button>
+                            <button class="btn btn-danger btn-sm">Decline</button>
+                            <button class="btn btn-primary btn-sm">Message</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="datatable-bottom">
+                    <div class="datatable-info">Showing 1 to 2 of 2 entries</div>
+                    <nav class="datatable-pagination">
+                      <ul class="datatable-pagination-list"></ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End New Connect Learner Table -->
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Learners List</h5>
+                <p>Manage your learners' information, including their schedule or teaching subject. Use the buttons to end a session, edit notes, or report an issue.</p>
+      
+                <!-- Learners Table -->
+                <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
+                  <div class="datatable-top">
+                    <div class="datatable-dropdown">
+                      <label>
+                        <select class="datatable-selector" name="per-page">
+                          <option value="5">5</option>
+                          <option value="10" selected="">10</option>
+                          <option value="15">15</option>
+                          <option value="-1">All</option>
+                        </select>
+                        entries per page
+                      </label>
+                    </div>
+                    <div class="datatable-search">
+                      <input class="datatable-input" placeholder="Search..." type="search" name="search" title="Search within table" />
+                    </div>
+                  </div>
+                  <div class="datatable-container">
+                    <table class="table datatable datatable-table">
+                      <thead>
+                        <tr>
+                          <th data-sortable="true"><button class="datatable-sorter">#</button></th>
+                          <th data-sortable="true"><button class="datatable-sorter">Learner Name</button></th>
+                          <th data-sortable="true"><button class="datatable-sorter">Notes</button></th>
+                          <th data-sortable="false"><button class="datatable-sorter">Actions</button></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-index="0">
+                          <td>1</td>
+                          <td>Brandon Jacob</td>
+                          <td>Math, Schedule: Mon-Wed 10:00-11:00 AM</td>
+                          <td>
+                            <button class="btn btn-danger btn-sm">End</button>
+                            <button class="btn btn-primary btn-sm">Edit Notes</button>
+                            <button class="btn btn-warning btn-sm">Report</button>
+                          </td>
+                        </tr>
+                        <tr data-index="1">
+                          <td>2</td>
+                          <td>Bridie Kessler</td>
+                          <td>Physics, Schedule: Tue-Thu 2:00-3:00 PM</td>
+                          <td>
+                            <button class="btn btn-danger btn-sm">End</button>
+                            <button class="btn btn-primary btn-sm">Edit Notes</button>
+                            <button class="btn btn-warning btn-sm">Report</button>
+                          </td>
+                        </tr>
+                        <tr data-index="2">
+                          <td>3</td>
+                          <td>Ashleigh Langosh</td>
+                          <td>Chemistry, Schedule: Mon-Fri 1:00-2:00 PM</td>
+                          <td>
+                            <button class="btn btn-danger btn-sm">End</button>
+                            <button class="btn btn-primary btn-sm">Edit Notes</button>
+                            <button class="btn btn-warning btn-sm">Report</button>
+                          </td>
+                        </tr>
+                        <tr data-index="3">
+                          <td>4</td>
+                          <td>Angus Grady</td>
+                          <td>Biology, Schedule: Wed-Fri 11:00-12:00 PM</td>
+                          <td>
+                            <button class="btn btn-danger btn-sm">End</button>
+                            <button class="btn btn-primary btn-sm">Edit Notes</button>
+                            <button class="btn btn-warning btn-sm">Report</button>
+                          </td>
+                        </tr>
+                        <tr data-index="4">
+                          <td>5</td>
+                          <td>Raheem Lehner</td>
+                          <td>English, Schedule: Mon-Wed 3:00-4:00 PM</td>
+                          <td>
+                            <button class="btn btn-danger btn-sm">End</button>
+                            <button class="btn btn-primary btn-sm">Edit Notes</button>
+                            <button class="btn btn-warning btn-sm">Report</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="datatable-bottom">
+                    <div class="datatable-info">Showing 1 to 5 of 5 entries</div>
+                    <nav class="datatable-pagination">
+                      <ul class="datatable-pagination-list"></ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Learners Table -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+{% endblock content%}

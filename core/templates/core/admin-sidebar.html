@@ -1,0 +1,47 @@
+{% load static %}
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+      <a class="nav-link" href="{% url 'administrator:admin-dashboard' %}">
+            <i class="bi bi-grid"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <!-- End Dashboard Nav -->
+
+        <li class="nav-item">
+      <a class="nav-link collapsed" href="{% url 'administrator:admin-learners-report' %}">
+            <i class="bi bi-people"></i>
+            <span>Learners Report</span>
+          </a>
+        </li>
+        <!-- End Learners Report Nav -->
+
+        <li class="nav-item">
+      <a class="nav-link collapsed" href="{% url 'administrator:admin-tutor-report' %}">
+            <i class="bi bi-person-badge"></i>
+            <span>Tutor Report</span>
+          </a>
+        </li>
+        <!-- End Tutor Report Nav -->
+
+        <li class="nav-item">
+      <a class="nav-link collapsed" href="{% url 'administrator:admin-account-approval' %}">
+            <i class="bi bi-check-circle"></i>
+            <span>Account Approval</span>
+          </a>
+        </li>
+        <!-- End Account Approval Nav -->
+
+        <li class="nav-item">
+      <a class="nav-link collapsed" href="{% url 'administrator:admin-user-review' %}">
+            <i class="bi bi-star-half"></i>
+            <span>User Review</span>
+          </a>
+        </li>
+        <!-- End User Review Nav -->
+      </ul>
+    </aside>
+    <!-- End Sidebar -->
+

@@ -317,9 +317,11 @@
   }
   /** Sliding Effect on Landing Page */
 
+if (window.location.href === "http://127.0.0.1:8000/"){
   document.addEventListener('DOMContentLoaded', function() {
-    const aboutUsSection = document.querySelector('.about-us-section');
-    const aboutMeSection = document.querySelector('.about-me-section');
+      const aboutUsSection = document.querySelector('.about-us-section');
+      const aboutMeSection = document.querySelector('.about-me-section');
+
     
     function handleScroll() {
       const aboutUsPosition = aboutUsSection.getBoundingClientRect().top;
@@ -341,7 +343,9 @@
     }
     
     window.addEventListener('scroll', handleScroll);
+
   });
+}
   
   /** Rating */
   document.addEventListener('DOMContentLoaded', () => {

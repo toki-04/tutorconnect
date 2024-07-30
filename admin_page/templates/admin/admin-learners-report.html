@@ -1,0 +1,194 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Admin / Learners Report</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+{% endblock head %}
+
+{% block content %}
+{% include 'core/admin-header.html' %}
+{% include 'core/admin-sidebar.html' %}
+
+    <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>Learners Report</h1>
+      </div>
+      <!-- End Page Title -->
+
+      <section class="section dashboard">
+        <div class="row">
+          <!-- List of Learners Report -->
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">List of Learners Report</h5>
+                <p>Review and manage learners' reports. Use the button to review each report.</p>
+
+                <!-- Learners Report Table -->
+                <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
+                  <div class="datatable-top">
+                    <div class="datatable-dropdown">
+                      <label>
+                        <select class="datatable-selector" name="per-page">
+                          <option value="5">5</option>
+                          <option value="10" selected="">10</option>
+                          <option value="15">15</option>
+                          <option value="-1">All</option>
+                        </select>
+                        entries per page
+                      </label>
+                    </div>
+                    <div class="datatable-search">
+                      <input class="datatable-input" placeholder="Search..." type="search" name="search" title="Search within table" />
+                    </div>
+                  </div>
+                  <div class="datatable-container">
+                    <table class="table datatable datatable-table">
+                      <thead>
+                        <tr>
+                          <th data-sortable="true"><button class="datatable-sorter">#</button></th>
+                          <th data-sortable="true"><button class="datatable-sorter">Reporter Name</button></th>
+                          <th data-sortable="true"><button class="datatable-sorter">Message</button></th>
+                          <th data-sortable="false"><button class="datatable-sorter">Actions</button></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-index="0">
+                          <td>1</td>
+                          <td>John Doe</td>
+                          <td>Reported inappropriate behavior.</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm">Review</button>
+                          </td>
+                        </tr>
+                        <tr data-index="1">
+                          <td>2</td>
+                          <td>Jane Smith</td>
+                          <td>Reported missing sessions.</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm">Review</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="datatable-bottom">
+                    <div class="datatable-info">Showing 1 to 2 of 2 entries</div>
+                    <nav class="datatable-pagination">
+                      <ul class="datatable-pagination-list"></ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Learners Report Table -->
+              </div>
+            </div>
+          </div>
+
+          <!-- List of All Tutors -->
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">List of All Tutors</h5>
+                <p>Manage your tutors' information. Use the buttons to suspend or delete a tutor.</p>
+
+                <!-- Tutors Table -->
+                <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
+                  <div class="datatable-top">
+                    <div class="datatable-dropdown">
+                      <label>
+                        <select class="datatable-selector" name="per-page">
+                          <option value="5">5</option>
+                          <option value="10" selected="">10</option>
+                          <option value="15">15</option>
+                          <option value="-1">All</option>
+                        </select>
+                        entries per page
+                      </label>
+                    </div>
+                    <div class="datatable-search">
+                      <input class="datatable-input" placeholder="Search..." type="search" name="search" title="Search within table" />
+                    </div>
+                  </div>
+                  <div class="datatable-container">
+                    <table class="table datatable datatable-table">
+                      <thead>
+                        <tr>
+                          <th data-sortable="true"><button class="datatable-sorter">#</button></th>
+                          <th data-sortable="true"><button class="datatable-sorter">Tutor Name</button></th>
+                          <th data-sortable="true"><button class="datatable-sorter">Email</button></th>
+                          <th data-sortable="false"><button class="datatable-sorter">Actions</button></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-index="0">
+                          <td>1</td>
+                          <td>Brandon Jacob</td>
+                          <td>brandon@example.com</td>
+                          <td>
+                            <button class="btn btn-warning btn-sm">Suspend</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                          </td>
+                        </tr>
+                        <tr data-index="1">
+                          <td>2</td>
+                          <td>Bridie Kessler</td>
+                          <td>bridie@example.com</td>
+                          <td>
+                            <button class="btn btn-warning btn-sm">Suspend</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                          </td>
+                        </tr>
+                        <tr data-index="2">
+                          <td>3</td>
+                          <td>Ashleigh Langosh</td>
+                          <td>ashleigh@example.com</td>
+                          <td>
+                            <button class="btn btn-warning btn-sm">Suspend</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                          </td>
+                        </tr>
+                        <tr data-index="3">
+                          <td>4</td>
+                          <td>Angus Grady</td>
+                          <td>angus@example.com</td>
+                          <td>
+                            <button class="btn btn-warning btn-sm">Suspend</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                          </td>
+                        </tr>
+                        <tr data-index="4">
+                          <td>5</td>
+                          <td>Raheem Lehner</td>
+                          <td>raheem@example.com</td>
+                          <td>
+                            <button class="btn btn-warning btn-sm">Suspend</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="datatable-bottom">
+                    <div class="datatable-info">Showing 1 to 5 of 5 entries</div>
+                    <nav class="datatable-pagination">
+                      <ul class="datatable-pagination-list"></ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Tutors Table -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End #main -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+
+{% endblock content %}
