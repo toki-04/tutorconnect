@@ -1,8 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from account.models import LearnerProfile
 
 # Create your views here.
 def learner_homepage(request):
-    return render(request, "learner/learner-homepage.html")
+    if request.user.is_authenticated:
+        profile = LearnerProfile.objects.get(user=request.user.id)
+
+        context = {
+            "profile": profile,
+        }
+
+        return render(request, "learner/learner-homepage.html", profile)
+
+    return redirect("home:index")
 
 def learner_settings(request):
     return render(request, "learner/learner-account-settings.html")

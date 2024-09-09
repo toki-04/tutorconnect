@@ -32,46 +32,46 @@
                     <p class="text-center small">Enter your personal details to create account</p>
                   </div>
 
-                <form class="row g-3 needs-validation" onsubmit="create_account({% url 'account:learner-create-account' %})" method="POST" action="{% url 'account:learner-create-account' %}">
+                  <form class="row g-3 needs-validation" method="POST" action="{% url 'account:learner-sign-up' %}">
                     {% csrf_token %}
                     <div class="col-md-5">
                       <label for="firstName" class="form-label">First Name</label>
-                      <input type="text" name="firstName" class="form-control" id="firstName" required>
+                      {{learner_sign_up_form.first_name}}
                       <div class="invalid-feedback">Please enter your first name!</div>
                     </div>
 
                     <div class="col-md-5">
                       <label for="lastName" class="form-label">Last Name</label>
-                      <input type="text" name="lastName" class="form-control" id="lastName" required>
+                      {{learner_sign_up_form.last_name}}
                       <div class="invalid-feedback">Please enter your last name!</div>
                     </div>
 
                     <div class="col-md-2">
                       <label for="middleInitial" class="form-label">M.I</label>
-                      <input type="text" name="middleInitial" class="form-control" id="middleInitial">
+                      {{learner_sign_up_form.middle_initial}}
                     </div>
 
                     <div class="col-md-6">
                       <label for="email" class="form-label">Email</label>
-                      <input type="email" name="email" class="form-control" id="email" required>
+                      {{signup_form.username}}
                       <div class="invalid-feedback">Please enter a valid email address!</div>
                     </div>
 
                     <div class="col-md-6">
                       <label for="dob" class="form-label">Date of Birth</label>
-                      <input type="date" name="dob" class="form-control" id="dob" required>
+                      {{learner_sign_up_form.date_of_birth}}
                       <div class="invalid-feedback">Please enter your date of birth!</div>
                     </div>
 
                     <div class="col-md-6">
                       <label for="password" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="password" required>
+                      {{signup_form.password1}}
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
 
                     <div class="col-md-6">
                       <label for="confirmPassword" class="form-label">Confirm Password</label>
-                      <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" required>
+                      {{signup_form.password2}}
                       <div class="invalid-feedback">Please confirm your password!</div>
                     </div>
 
@@ -79,13 +79,9 @@
                       <label class="form-label">Account Type</label>
                       <div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="accountType" id="parentAccount" value="parent" required>
-                          <label class="form-check-label" for="parentAccount">Parent</label>
+                          {{learner_sign_up_form.account_type}}
                         </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="accountType" id="personalAccount" value="personal" required>
-                          <label class="form-check-label" for="personalAccount">Personal</label>
-                        </div>
+
                         <div class="invalid-feedback">Please select your account type!</div>
                       </div>
                     </div>
